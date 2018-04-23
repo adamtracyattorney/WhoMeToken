@@ -465,7 +465,7 @@ contract WHOMCrowdsale is Ownable, Crowdsale, MintableToken {
         result = true;
     }
 
-    function setRate(uint256 _newRate) public onlyOwner returns (bool){
+    function setRate(uint256 _newRate) external onlyOwner returns (bool){
         require(_newRate > 0);
         rate = _newRate;
         return true;
