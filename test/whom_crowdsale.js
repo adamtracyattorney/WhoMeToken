@@ -34,10 +34,6 @@ contract('WHOMCrowdsale', (accounts) => {
         var weiRaisedBefore = await contract.weiRaised.call();
         //console.log("tokenAllocatedBefore = " + tokenAllocatedBefore);
 
-        var numberToken = await contract.validPurchaseTokens.call(Number(buyWei));
-        //console.log(" numberTokens = " + JSON.stringify(numberToken));
-        //console.log("numberTokens = " + numberToken);
-
         await contract.buyTokens(accounts[2],{from:accounts[2], value:buyWei});
         var tokenAllocatedAfter = await contract.tokenAllocated.call();
         //console.log("tokenAllocatedAfter = " + tokenAllocatedAfter);

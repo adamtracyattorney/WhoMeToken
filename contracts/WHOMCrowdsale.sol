@@ -380,7 +380,6 @@ contract WHOMCrowdsale is Ownable, Crowdsale, MintableToken {
         buyTokens(msg.sender);
     }
 
-    // low level token purchase function
     function buyTokens(address _investor) public inState(State.Active) payable returns (uint256){
         require(_investor != address(0));
         uint256 weiAmount = msg.value;
